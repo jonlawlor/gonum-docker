@@ -16,7 +16,8 @@ RUN mkdir /gopath
 ENV GOROOT /goroot
 ENV GOPATH /gopath
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
+ENV CGO_LDFLAGS -L/opt/OpenBLAS/lib -lopenblas
 
 # gonum's BLAS
 RUN git clone -b cblas-setup git://github.com/gonum/blas.git $GOPATH/src/github.com/gonum/blas
-RUN cd /gopath/src/github.com/gonum/blas/cblas/ && CGO_LDFLAGS="-L/opt/OpenBLAS/lib -lopenblas" go install
+RUN cd /gopath/src/github.com/gonum/blas/cblas/ && go install
