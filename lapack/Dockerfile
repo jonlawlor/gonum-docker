@@ -1,4 +1,4 @@
-FROM jonlawlor/blas
+FROM jonlawlor/gonum-blas
 MAINTAINTER Jonathan J Lawlor <jonathan.lawlor@gmail.com>
 # note: this uses OpenBLAS, and Ubuntu linux
 
