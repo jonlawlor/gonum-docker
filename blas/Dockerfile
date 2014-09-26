@@ -10,7 +10,7 @@ MAINTAINER Jonathan J Lawlor <jonathan.lawlor@gmail.com>
 # Go, taken from https://registry.hub.docker.com/u/google/golang/dockerfile/
 # except that I've added the libblas-dev package as well, to get cblas.
 RUN apt-get update -y && apt-get install --no-install-recommends -y -q curl build-essential ca-certificates git mercurial bzr libblas-dev
-RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
+RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.3.2.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
 RUN mkdir /gopath
 
 ENV GOROOT /goroot
